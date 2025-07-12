@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://XenonPPG.github.io/BabloClicker",
+  "homepage": "https://xenonppg.github.io/Bablo-Clicker/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
