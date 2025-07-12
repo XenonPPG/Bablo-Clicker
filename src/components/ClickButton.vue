@@ -4,9 +4,12 @@ import Card from "@/components/Card.vue";
 import { useMoneyStore } from "@/stores/money";
 import { useItemStore } from "@/stores/itemStore";
 
-// Заменённый способ подключения изображений
 const active = new URL('@/assets/img/active.jpg', import.meta.url).href;
 const normal = new URL('@/assets/img/normal.jpg', import.meta.url).href;
+
+// Предзагрузка active спрайта
+const preload = new Image();
+preload.src = active;
 
 const src = ref(normal);
 const money = useMoneyStore();
@@ -19,6 +22,7 @@ function onClick(isClicked: boolean) {
   }
 }
 </script>
+
 
 <template>
   <Card class="aspect-square w-70 h-70 !p-0 select-none overflow-hidden">
