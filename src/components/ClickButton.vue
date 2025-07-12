@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import {ref} from "vue";
+import { ref } from "vue";
 import Card from "@/components/Card.vue";
-import active from "@/assets/img/active.jpg";
-import normal from "@/assets/img/normal.jpg";
-import {useMoneyStore} from "@/stores/money";
+import { useMoneyStore } from "@/stores/money";
 import { useItemStore } from "@/stores/itemStore";
+
+// Заменённый способ подключения изображений
+const active = new URL('@/assets/img/active.jpg', import.meta.url).href;
+const normal = new URL('@/assets/img/normal.jpg', import.meta.url).href;
 
 const src = ref(normal);
 const money = useMoneyStore();
